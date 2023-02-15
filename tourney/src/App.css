@@ -1,7 +1,14 @@
 body{
-  background: rgb(103, 105, 80);
+  background: black;
   text-align: center;
 };
 #heading{
   font-weight: bolder;
 };
+#main-container{
+  background: var(--lpink);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  text-align: center;
+}

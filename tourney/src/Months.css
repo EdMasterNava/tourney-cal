@@ -1,0 +1,28 @@
+:root {
+    --darker: #181A1C;
+    --lighter: #31313D;
+    --dgrey: #4F5454;
+    --white: white;
+}
+#month-container{
+    background: var(--lighter);
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+}
+.month-button{
+    height: auto;
+    width: auto;
+    background: var(--dgrey);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    margin: 10px;
+}
+.month-button:hover {
+    background: var(--darker);
+    color: var(--white);
+    cursor: pointer;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { jsonObect } from './jsonObect';
 import Months from './Months';
+import './Events.css';
 
 function Events(){
     //state
@@ -42,8 +43,8 @@ function Events(){
     return (
         <React.Fragment>
             
-        <div className='events-container'>
-            <div className='upcoming'>
+        <div id='events-container'>
+            <div id='upcoming'>
                 <h1>Upcoming Events</h1>
             </div>
 
