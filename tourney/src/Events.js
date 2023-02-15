@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { jsonObect } from './jsonObect';
 import Months from './Months';
 import './Events.css';
@@ -13,8 +13,9 @@ function Events(){
         monthSelected: { background: '#181A1C' },
         monthNotSelected: { background: '#4F5454' }
     });
+    // useEffect(filterEventsByDate, [eventListData.selectedMonth]);
     const handleMonth = (event) => {
-        setEventListData({...eventListData, selectedMonth: event.currentTarget.id}, () => filterEventsByDate());
+        setEventListData({...eventListData, selectedMonth: event.currentTarget.id});
     }
     const filterEventsByDate = () => {
         if(eventListData.selectedMonth === 12){
@@ -51,7 +52,7 @@ function Events(){
             <Months monthData={eventListData} handleMonth={handleMonth}/>
             {eventListData.completeEventList.map(item => {
                     return(
-                        <button className="eventBlock" id={item['id']}>
+                        <button className="event-block" id={item['id']}>
                             <div id="event-name">
                                 <p id="event-date">
                                     {item["event_start_date"] === item["event_end_date"] ? 
