@@ -5,7 +5,6 @@
     --white: white;
 }
 #month-container{
-    background: var(--lighter);
     display: flex;
     justify-content: space-evenly;
     height: auto;
@@ -14,8 +13,7 @@
 .month-button{
     height: auto;
     width: auto;
-    background: var(--dgrey);
-    color: white;
+    color: var(--white);
     border-radius: 5px;
     border: 2px solid black;
     padding: 10px 20px;

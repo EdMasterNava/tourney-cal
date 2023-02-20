@@ -2,18 +2,22 @@ import React from "react";
 import './Months.css';
 
 function Months(props){
+    const monthSelected = { "background": "#181A1C" };
+    const monthNotSelected = { "background": "#4F5454" };
+    const months = props.monthData.months;
+    const selectedMonth = props.monthData.selectedMonth;
     return (
         <React.Fragment>
             <div id="month-container">
-                {props.monthData.months.map((month, index) => {
+                {months.map((month, index) => {
                     return  <button className="month-button"
                                     id={index}
                                     onClick={props.handleMonth}
-                                    stlye={props.monthData.selectedMonth === index ? props.monthData.monthSelected : props.monthData.monthNotSelected}>
+                                    style={selectedMonth == index ? monthSelected : monthNotSelected}>
                                 {month}
                             </button>
-                })}
-
+                    })
+                }
             </div>
         </React.Fragment>
     )
