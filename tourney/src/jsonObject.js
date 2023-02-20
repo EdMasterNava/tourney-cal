@@ -88,5 +88,7 @@ export const jsonObject = [
         "event_end_date": new Date(2022, 5, 25).toISOString() ,//the month is 0-indexed
         "venue": "Prince George's Sports and Learning Complex, Landover",
         "category": "No Gi"
-    }];
-    export default {jsonObject}
+    }].sort((a,b) => {
+        return new Date(a['event_start_date']).getTime() - new Date(b['event_start_date']).getTime();
+    });
+    export default {jsonObject};
