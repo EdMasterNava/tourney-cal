@@ -20,7 +20,7 @@
     margin: 10px;
 }
 .month-button:hover {
-    background: var(--darker);
+    background: var(--darker) !important;
     color: var(--white);
     cursor: pointer;
 }
