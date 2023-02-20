@@ -2,9 +2,10 @@ import React from "react";
 import './Months.css';
 
 function Months(props){
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'All'];
+    const monthNotSelected = { "background": "#4F5454" };    
     const monthSelected = { "background": "#181A1C" };
-    const monthNotSelected = { "background": "#4F5454" };
-    const months = props.monthData.months;
     const selectedMonth = props.monthData.selectedMonth;
     return (
         <React.Fragment>

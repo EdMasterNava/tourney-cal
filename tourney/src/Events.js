@@ -1,35 +1,41 @@
 import React, { useEffect, useState } from 'react';
-import { jsonObect } from './jsonObect';
+import { jsonObject } from './jsonObject';
 import Months from './Months';
 import './Events.css';
 
 function Events(){
     //state
     const [eventListData, setEventListData] = useState({
-        completeEventList: jsonObect,
-        selectedMonth: 12,
-        months:['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'All'],
-        monthSelected: { background: '#181A1C' },
-        monthNotSelected: { background: '#4F5454' }
+        completeEventList: jsonObject,
+        displayEventList: jsonObject,
+        selectedMonth: 12
     });
-    // useEffect(filterEventsByDate, [eventListData.selectedMonth]);
+    // useEffect(() => {
+    //     if(eventListData.selectedMonth === 12){
+    //         setEventListData(prev => {
+    //             return {...prev, displayEventList: prev.completeEventList}
+    //         });
+    //         console.log(`displayEvents: ${eventListData.displayEventList}`);
+    //     }else{
+    //         const newArr = [];
+    //         eventListData.completeEventList.forEach(obj => {
+    //             if(eventListData.selectedMonth === new Date(obj["event_start_date"]).getMonth()){
+    //                 newArr.push(obj);
+    //             }
+    //         });
+    //         setEventListData(prev => {
+    //             return {...prev, displayEventList: newArr}
+    //         });
+    //         console.log(`displayEvents: ${eventListData.displayEventList}`);
+    //     }
+    // }, [eventListData.selectedMonth]);
     const handleMonth = (event) => {
-        setEventListData({...eventListData, selectedMonth: event.currentTarget.id});
+        console.log(`handleMonth! target.id: ${event.target.id}`);
+        setEventListData(prev => {
+            return {...prev, selectedMonth: event.target.id}
+        });
     }
-    const filterEventsByDate = () => {
-        if(eventListData.selectedMonth === 12){
-            setEventListData({...eventListData, displayEventList: eventListData.completeEventList});
-        }else{
-            const newArr = [];
-            eventListData.completeEventList.forEach(obj => {
-                if(setEventListData.selectedMonth === new Date(obj["event_start_date"]).getMonth()){
-                    newArr.push(obj);
-                }
-            });
-            setEventListData({...eventListData, displayEventList: newArr});
-        }
-    }
+    // const filterEventsByDate = 
     const getCompleteList = () =>{
         return eventListData.completeEventList;
     }
@@ -50,21 +56,22 @@ function Events(){
             </div>
 
             <Months monthData={eventListData} handleMonth={handleMonth}/>
-            {eventListData.completeEventList.map(item => {
+            {eventListData.displayEventList.map(obj => {
                     return(
-                        <button className="event-block" id={item['id']}>
+                        <button className="event-block" id={obj['id']}>
                             <div id="event-name">
                                 <p id="event-date">
-                                    {item["event_start_date"] === item["event_end_date"] ? 
-                                    new Date(item["event_start_date"]).toDateString() : 
-                                    new Date(item["event_start_date"]).toDateString() + ' - ' + 
-                                    new Date(item["event_end_date"]).toDateString()}
+                                    {obj["event_start_date"] === obj["event_end_date"] ? 
+                                        new Date(obj["event_start_date"]).toDateString() : 
+                                        new Date(obj["event_start_date"]).toDateString() + ' - ' + 
+                                        new Date(obj["event_end_date"]).toDateString()
+                                    }
                                 </p>
                                 <p id="title">
-                                    {item["event_name"]}
+                                    {obj["event_name"]}
                                 </p>
                                 <p id="venue">
-                                    {item["venue"]}
+                                    {obj["venue"]}
                                 </p>
                             </div>
                         </button>
