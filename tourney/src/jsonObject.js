@@ -1,4 +1,4 @@
-export const jsonObect = [
+export const jsonObject = [
     {
         "id": 1,
         "event_host": "IBJJF",
@@ -89,4 +89,4 @@ export const jsonObect = [
         "venue": "Prince George's Sports and Learning Complex, Landover",
         "category": "No Gi"
     }];
-    export default {jsonObect}
+    export default {jsonObject}
