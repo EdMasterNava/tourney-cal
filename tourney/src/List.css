@@ -1,0 +1,32 @@
+.event-block {
+    background: var(--darker);
+    height: auto;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: var(--white);
+}
+.event-block:hover {
+    background: var(--white);
+    color: black;
+    cursor: pointer;
+}
+#event-name {
+    height: 100%;
+    width: 100%;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+}
+#title {
+    font-weight: bold;
+    text-align: left;
+}
+#venue {
+    font-size: small;
+    text-align: left;
+}
+#event-date {
+    font-size: small;
+    text-align: left;
+}

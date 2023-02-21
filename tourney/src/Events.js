@@ -11,7 +11,7 @@ function Events(){
         displayEventList: jsonObject,
         selectedMonth: 12
     });
-    //update displayEventList when selectedMonth is updated
+    //update displayEventList after selectedMonth is updated
     useEffect(() => {
         if(eventListData.selectedMonth == 12){
             setEventListData(prev => {

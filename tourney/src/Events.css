@@ -3,47 +3,15 @@
     --lighter: #31313D;
     --white: white;
 }
-#events-container{
+#events-container {
     background: var(--lighter);
     height: auto;
     padding: 0 400px;
     display: flex;
     flex-direction: column;
 }
-#upcoming{
+#upcoming {
     background: var(--lighter);
     padding: 10px;
     color: var(--white);
-}
-.event-block{
-    background: var(--darker);
-    height: auto;
-    width: 100%;
-    margin: 10px auto;
-    border-radius: 5px;
-    border: 2px solid black;
-    color: var(--white);
-}
-.event-block:hover{
-    background: var(--white);
-    color: black;
-    cursor: pointer;
-}
-#event-name{
-    height: 100%;
-    width: 100%;
-    text-overflow: ellipsis;
-    padding: 0 10px;
-}
-#title{
-    font-weight: bold;
-    text-align: left;
-}
-#venue{
-    font-size: small;
-    text-align: left;
-}
-#eventDate{
-    font-size: small;
-    text-align: left;
 }
