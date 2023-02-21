@@ -15,12 +15,12 @@ function List(props){
         <React.Fragment>
             {displayEventList.map(obj => {
                     return(
-                        <button className="event-block" id={obj['id']}>
-                            <div id="event-name">
+                        <button className="event-block" id={obj["id"]}>
+                            <div id="block-container">
                                 <p id="event-date">
                                     {displayDate(obj)}
                                 </p>
-                                <p id="title">
+                                <p id="event-name">
                                     {obj["event_name"]}
                                 </p>
                                 <p id="venue">

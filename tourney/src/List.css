@@ -12,13 +12,13 @@
     color: black;
     cursor: pointer;
 }
-#event-name {
+#block-container {
     height: 100%;
     width: 100%;
     text-overflow: ellipsis;
     padding: 0 10px;
 }
-#title {
+#event-name {
     font-weight: bold;
     text-align: left;
 }
