@@ -1,8 +1,12 @@
+:root{
+    --darker: #181A1C;
+    --white: white;
+}
 .event-block {
     background: var(--darker);
     height: auto;
     width: 100%;
-    margin: 10px auto;
+    margin: 10px 0;
     border-radius: 5px;
     border: 2px solid black;
     color: var(--white);
@@ -13,10 +17,20 @@
     cursor: pointer;
 }
 #block-container {
+    /* background: green; */
     height: 100%;
     width: 100%;
     text-overflow: ellipsis;
-    padding: 0 10px;
+    padding: 5px 10px 5px 0;
+    display: flex;
+}
+#date-container {
+    background: grey;
+    height: 100%;
+    width: 15%;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+    border: 2px solid black;
 }
 #event-name {
     font-weight: bold;
@@ -28,5 +42,4 @@
 }
 #event-date {
     font-size: small;
-    text-align: left;
 }

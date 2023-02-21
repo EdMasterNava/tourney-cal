@@ -6,7 +6,7 @@
 #events-container {
     background: var(--lighter);
     height: auto;
-    padding: 0 400px;
+    padding: 0 350px;
     display: flex;
     flex-direction: column;
 }

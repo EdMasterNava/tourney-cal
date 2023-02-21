@@ -9,7 +9,9 @@ function Events(){
     const [eventListData, setEventListData] = useState({
         completeEventList: jsonObject,
         displayEventList: jsonObject,
-        selectedMonth: 12
+        selectedMonth: 12,
+        months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'All']
     });
     //update displayEventList after selectedMonth is updated
     useEffect(() => {
@@ -42,7 +44,7 @@ function Events(){
                     <h1>Upcoming Events</h1>
                 </div>
                 <Months monthData={eventListData} handleMonth={handleMonth}/>
-                <List displayEventList={eventListData.displayEventList}/>
+                <List listData={eventListData}/>
             </div>
         </React.Fragment>
     )
