@@ -17,29 +17,38 @@
     cursor: pointer;
 }
 #block-container {
-    /* background: green; */
     height: 100%;
     width: 100%;
-    text-overflow: ellipsis;
     padding: 5px 10px 5px 0;
     display: flex;
 }
 #date-container {
     background: grey;
-    height: 100%;
-    width: 15%;
+    width: clamp(50px, 40vw, 100px);
     border-radius: 5px;
     margin: 0 10px 0 0;
     border: 2px solid black;
+}
+#text-container{
+    font-size: clamp(5px, 2.4vw, 20px);
 }
 #event-name {
     font-weight: bold;
     text-align: left;
 }
 #venue {
-    font-size: small;
     text-align: left;
 }
 #event-date {
     font-size: small;
 }
+/* @media (max-width: 1100px) {
+    #date-container {
+        width: clamp(50px, 40vw, 100px);
+    }
+}
+@media (max-width: 500px) {
+    #date-container {
+        width: 70px;
+    }
+} */
