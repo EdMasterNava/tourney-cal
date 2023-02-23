@@ -21,16 +21,21 @@
     width: 100%;
     padding: 5px 10px 5px 0;
     display: flex;
+    flex-wrap: nowrap;
 }
+
 #date-container {
+    flex: 1 1 10%;
     background: grey;
-    width: clamp(50px, 40vw, 100px);
+    /* width: clamp(50px, 40vw, 100px); */
     border-radius: 5px;
     margin: 0 10px 0 0;
     border: 2px solid black;
+    padding: .5vw;
 }
 #text-container{
-    font-size: clamp(5px, 2.4vw, 20px);
+    flex: 1 1 90%;
+    font-size: clamp(10px, 1.9vw, 20px);
 }
 #event-name {
     font-weight: bold;
@@ -44,11 +49,34 @@
 }
 /* @media (max-width: 1100px) {
     #date-container {
-        width: clamp(50px, 40vw, 100px);
+        flex: 1 1 15%
+    }
+    #text-container{
+        flex: 1 1 75%;
+    }
+
+} */
+@media (max-width: 850px) {
+    #date-container {
+        flex: 1 1 12%
+    }
+    #text-container{
+        flex: 1 1 78%;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     #date-container {
-        width: 70px;
+        flex: 1 1 15%
     }
-} */
+    #text-container{
+        flex: 1 1 75%;
+    }
+}
+@media (max-width: 450px) {
+    #date-container {
+        flex: 1 1 25%
+    }
+    #text-container{
+        flex: 1 1 75%;
+    }
+}

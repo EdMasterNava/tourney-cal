@@ -10,6 +10,9 @@
     display: flex;
     flex-direction: column;
 }
+#events-container > * {
+    flex-basis: 100%;
+}
 #upcoming {
     background: var(--lighter);
     padding: 10px;
