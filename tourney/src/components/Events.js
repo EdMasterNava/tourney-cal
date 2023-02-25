@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { jsonObject } from './jsonObject';
+import { jsonObject } from '../jsonObject';
 import Months from './Months';
 import List from './List';
-import './Events.css';
+import './css/Events.css';
 
 function Events(){
     //state

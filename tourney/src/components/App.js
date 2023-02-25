@@ -1,6 +1,6 @@
 import React from "react";
 import Events from "./Events";
-import './App.css';
+import './css/App.css';
 
 function App(props){
   //html render

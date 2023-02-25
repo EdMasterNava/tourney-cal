@@ -1,5 +1,5 @@
 import React from "react";
-import './List.css';
+import './css/List.css';
 
 function List(props){
     const displayEventList = props.listData.displayEventList;
